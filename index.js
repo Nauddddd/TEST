@@ -5,6 +5,7 @@ const readline = require('readline').createInterface({
 
 readline.question(``, s => {
 	s = lengthOfLongestSubstring(s);
+    console.log(s);
 	readline.close();
 });
 
