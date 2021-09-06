@@ -19,7 +19,7 @@ function lengthOfLongestSubstring(s) {
 		var start = 0;
 		var cur;
 		for(cur = 0; cur < s.length; cur++) {
-			if(!(s.indexOf(s[cur], start) == cur)) { 
+			if(!(s.indexOf(s[cur], start) == cur)) { //The duplicate happens
 				temp_len = cur - start;
 				start = s.indexOf(s[cur],start)+1;
 				if (temp_len > max)
@@ -27,6 +27,7 @@ function lengthOfLongestSubstring(s) {
 			}
 		}
 	}
+    // Reach the end of the string
 	temp_len = cur - start;
     if (temp_len > max)
         max = temp_len;
